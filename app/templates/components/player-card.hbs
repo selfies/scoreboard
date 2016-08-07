@@ -1,0 +1,9 @@
+<div class="card {{team}}">
+  {{#if editName}}
+    {{input type="text" escape-press="changeName" focus-out="changeName" insert-newline="changeName" value=name class="name"}}<br>
+  {{else}}
+    <h2 class="name" {{action "changeName"}}>{{name}}</h2>
+  {{/if}}
+  <img src="{{photo}}" class="profile" />
+  <h1 class="score" {{action "increment"}}>{{score}}</h1>
+</div>
